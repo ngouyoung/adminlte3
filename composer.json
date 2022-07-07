@@ -1,0 +1,25 @@
+{
+    "name": "laravel/admin-lte3",
+    "description": "this package is relate to laravel admin with user assessment",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Laravel\\AdminLte3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "skipt"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laravel\\AdminLte3\\AdminServiceProvider"
+            ]
+        }
+    }
+}
