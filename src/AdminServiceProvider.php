@@ -27,7 +27,7 @@ class AdminServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/views' => resource_path('views'),
-            __DIR__.'/app' => app_path('./app'),
+            __DIR__.'/app' => app_path('./../app'),
             __DIR__.'/routes' => public_path('./app'),
         ]);
     }
