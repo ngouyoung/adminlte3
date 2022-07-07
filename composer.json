@@ -6,7 +6,12 @@
     "autoload": {
         "psr-4": {
             "Wemade\\AdminLte3\\": "src/"
-        }
+        },
+        "files": [
+            "app/Helpers/helpers.php",
+            "app/Helpers/routes.php",
+            "app/Helpers/buttons.php"
+        ]
     },
     "authors": [
         {

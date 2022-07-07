@@ -1,0 +1,41 @@
+table thead th {
+    white-space: nowrap;
+}
+
+.is-invalid .select2-container--default .select2-selection--single {
+    border: 1px solid #dc3545;
+    padding: 0.46875rem 0.75rem;
+    height: calc(2.25rem + 2px);
+}
+
+#upload-demo {
+    height: 250px;
+    padding-bottom: 25px;
+}
+
+.select2-container--default .select2-selection--single {
+    border-radius: 0 !important;
+}
+
+.form-control {
+    border-radius: 0 !important;
+}
+
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 1.5em;
+    padding-inline-end: 1.5em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: solid;
+    border-color: threedface;
+    border-image: initial;
+}
+
+legend {
+    width: auto!important;
+}
