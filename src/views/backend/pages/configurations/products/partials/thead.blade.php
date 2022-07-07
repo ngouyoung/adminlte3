@@ -1,0 +1,11 @@
+<tr>
+    <th>image</th>
+    <th>Name</th>
+    <th>Code</th>
+    <th>Quantity</th>
+    <th>Slot</th>
+    <th>Category</th>
+    <th>Currency</th>
+    <th>Created_At</th>
+    <th>Actions</th>
+</tr>

@@ -23,6 +23,10 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        dd('hello');
+        $this->loadViewsFrom(__DIR__ . '/views', 'backend');
+
+        $this->publishes([
+            __DIR__.'/views' => resource_path('views'),
+        ]);
     }
 }
