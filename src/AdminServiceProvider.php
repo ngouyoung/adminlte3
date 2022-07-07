@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\AdminLte3;
+namespace Wemade\AdminLte3;
 
 use Illuminate\Support\ServiceProvider;
 
