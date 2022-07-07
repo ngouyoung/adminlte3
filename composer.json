@@ -1,11 +1,11 @@
 {
-    "name": "imade/admin-lte3",
+    "name": "wemade/admin-lte3",
     "description": "this package is relate to laravel admin with user assessment",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Imade\\AdminLte3\\": "src/"
+            "Wemade\\AdminLte3\\": "src/"
         }
     },
     "authors": [
