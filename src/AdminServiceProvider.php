@@ -33,6 +33,7 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__ . '/app/Helpers' => app_path('Helpers'),
             __DIR__ . '/app/Services' => app_path('Services'),
             __DIR__ . '/app/Traits' => app_path('Traits'),
+            __DIR__ . '/database' => base_path('database'),
         ]);
     }
 
