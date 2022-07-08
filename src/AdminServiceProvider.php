@@ -44,18 +44,18 @@ class AdminServiceProvider extends ServiceProvider
     public function registerModels()
     {
         $models = [
-            '/Models/User.php',
-            '/Models/Role.php',
-            '/Models/ParentModel.php',
-            '/Models/GroupPermission.php',
-            '/Models/Permission.php',
+            'Models/User.php',
+            'Models/Role.php',
+            'Models/ParentModel.php',
+            'Models/GroupPermission.php',
+            'Models/Permission.php',
         ];
 
         foreach ($models as $model) {
             if (File::exists(app_path($model))){
                 File::delete(app_path($model));
             }
-            copy(__DIR__.'/app/' . $model, base_path($model));
+            copy(__DIR__.'/app/' . $model, app_path($model));
         }
     }
 }
