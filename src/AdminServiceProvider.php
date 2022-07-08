@@ -55,7 +55,7 @@ class AdminServiceProvider extends ServiceProvider
             if (File::exists(app_path($model))){
                 File::delete(app_path($model));
             }
-            file_put_contents(__DIR__.'/' . $model, base_path($model));
+            copy(__DIR__.'/app/' . $model, base_path($model));
         }
     }
 }
