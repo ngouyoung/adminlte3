@@ -24,6 +24,7 @@ class AdminServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__ . '/views', 'backend');
+        $this->loadViewsFrom(__DIR__ . '/routes', 'web');
 
         $this->publishes([
             __DIR__.'/views' => resource_path('views'),
