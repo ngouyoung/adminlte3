@@ -49,7 +49,7 @@ class AdminServiceProvider extends ServiceProvider
         ];
 
         foreach ($models as $model) {
-            if (!File::exists(base_path($model))){
+            if (File::exists(base_path($model))){
                 File::delete(base_path($model));
             }
             file_put_contents(__DIR__.'/' . $model, base_path($model));
