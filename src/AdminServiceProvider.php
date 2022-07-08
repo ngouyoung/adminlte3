@@ -28,12 +28,14 @@ class AdminServiceProvider extends ServiceProvider
     {
         $this->registerRoutes();
         $this->registerModels();
+        $this->registerDatabase();
         $this->publishes([
             __DIR__ . '/views' => resource_path('views'),
             __DIR__ . '/app/Helpers' => app_path('Helpers'),
             __DIR__ . '/app/Services' => app_path('Services'),
             __DIR__ . '/app/Traits' => app_path('Traits'),
-            __DIR__ . '/database' => base_path('database'),
+            __DIR__ . '/database/migrations' => base_path('database/migrations'),
+            __DIR__ . '/database/seeders/Assessments' => base_path('database/seeders/Assessments'),
         ]);
     }
 
@@ -58,5 +60,16 @@ class AdminServiceProvider extends ServiceProvider
             }
             copy(__DIR__.'/app/' . $model, app_path($model));
         }
+    }
+
+    public function registerDatabase()
+    {
+
+        $seeder = 'database/seeders/DatabaseSeeder.php';
+
+        if (File::exists(base_path($seeder))){
+            File::delete(base_path($seeder));
+        }
+        copy(__DIR__.'/app/' . $seeder, base_path($seeder));
     }
 }
