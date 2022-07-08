@@ -28,7 +28,7 @@ Route::group(['middleware' => ['auth']], function () {
         require __DIR__ . '/Web/Backend/dashboard.php';
     });
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
 require __DIR__ . '/Web/Error/index.php';
 
