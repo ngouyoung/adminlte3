@@ -24,12 +24,12 @@ class AdminServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__ . '/views', 'backend');
-        $this->loadViewsFrom(__DIR__ . '/routes', 'web');
+        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
 
         $this->publishes([
             __DIR__.'/views' => resource_path('views'),
             __DIR__.'/app' => app_path('./../app'),
-            __DIR__.'/routes' => public_path('./../routes'),
+//            __DIR__.'/routes' => public_path('./../routes'),
         ]);
     }
 }
