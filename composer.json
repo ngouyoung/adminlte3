@@ -8,9 +8,9 @@
             "Wemade\\AdminLte3\\": "src/"
         },
         "files": [
-            "app/Helpers/helpers.php",
-            "app/Helpers/routes.php",
-            "app/Helpers/buttons.php"
+            "src/app/Helpers/helpers.php",
+            "src/app/Helpers/routes.php",
+            "src/app/Helpers/buttons.php"
         ]
     },
     "authors": [
