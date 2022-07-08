@@ -23,24 +23,9 @@ Route::group(['middleware' => ['auth']], function () {
             require __DIR__ . '/Web/Backend/Assessment/group_permission.php';
         });
 
-        Route::group(['prefix' => 'configurations', 'as' => 'configurations.', 'middleware' => 'permission:configurations'], function () {
-            require __DIR__ . '/Web/Backend/Configuration/category.php';
-            require __DIR__ . '/Web/Backend/Configuration/product.php';
-            require __DIR__ . '/Web/Backend/Configuration/unit.php';
-            require __DIR__ . '/Web/Backend/Configuration/currency.php';
-            require __DIR__ . '/Web/Backend/Configuration/slot.php';
-            require __DIR__ . '/Web/Backend/Configuration/supplier.php';
-        });
-
-        Route::group(['prefix' => 'inventories', 'as' => 'inventories.', 'middleware' => 'permission:inventories'], function () {
-            require __DIR__ . '/Web/Backend/Inventory/stock.php';
-            require __DIR__ . '/Web/Backend/Inventory/report.php';
-        });
-
         require __DIR__ . '/Web/Backend/profile.php';
         require __DIR__ . '/Web/Backend/filter.php';
         require __DIR__ . '/Web/Backend/dashboard.php';
-        require __DIR__ . '/Web/Backend/customer.php';
     });
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
