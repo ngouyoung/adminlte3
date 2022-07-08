@@ -29,8 +29,12 @@ class AdminServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/views' => resource_path('views'),
             __DIR__.'/app' => app_path('./../app'),
-//            __DIR__.'/routes' => public_path('./../routes'),
         ]);
+        file_put_contents(
+            base_path('routes/web.php'),
+            file_get_contents(__DIR__.'/Auth/stubs/routes.stub'),
+            FILE_APPEND
+        );
     }
 
     public function registerRoutes() {
