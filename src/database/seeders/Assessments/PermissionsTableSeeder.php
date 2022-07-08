@@ -16,7 +16,7 @@ class PermissionsTableSeeder extends Seeder
     {
         Permission::truncate();
         $models = [
-            'user', 'role', 'permission', 'group-permission', 'unit', 'category', 'currency', 'product', 'customer'
+            'user', 'role', 'permission', 'group-permission'
         ];
 
         foreach ($models as $key => $model) {

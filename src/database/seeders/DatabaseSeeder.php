@@ -25,14 +25,6 @@ class DatabaseSeeder extends Seeder
             RolesTableSeeder::class,
             PermissionsTableSeeder::class,
             RolesPermissionsTableSeeder::class,
-            CurrencyTableSeeder::class,
-            CategoryTableSeeder::class,
-            SlotTableSeeder::class,
-            SupplierTableSeeder::class,
-            UnitTableSeeder::class,
-            ProductTableSeeder::class
         ]);
-//         \App\Models\Category::factory(20)->create();
-//         \App\Models\Unit::factory(1000)->create();
     }
 }

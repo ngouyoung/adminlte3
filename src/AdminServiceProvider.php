@@ -28,7 +28,8 @@ class AdminServiceProvider extends ServiceProvider
     {
         $this->registerRoutes();
         $this->registerModels();
-        $this->registerDatabase();
+        $this->registerDatabases();
+        $this->registerSeeders();
         $this->publishes([
             __DIR__ . '/views' => resource_path('views'),
             __DIR__ . '/app/Helpers' => app_path('Helpers'),
@@ -42,6 +43,14 @@ class AdminServiceProvider extends ServiceProvider
     public function registerRoutes()
     {
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+    }
+
+    public function registerDatabases()
+    {
+        $databases = [
+            '2014_10_12_000000_create_users_table.php',
+            '2014_10_12_000000_create_users_table.php'
+        ];
     }
 
     public function registerModels()
@@ -62,7 +71,7 @@ class AdminServiceProvider extends ServiceProvider
         }
     }
 
-    public function registerDatabase()
+    public function registerSeeders()
     {
 
         $seeder = 'seeders/DatabaseSeeder.php';
