@@ -33,7 +33,7 @@ class AdminServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/views' => resource_path('views'),
             __DIR__ . '/app/Helpers' => app_path('Helpers'),
-            __DIR__ . '/app/Http/Controllers/Backend' => app_path('Http/Controllers/Backend'),
+            __DIR__ . '/app/Http/Controllers' => app_path('Http/Controllers'),
             __DIR__ . '/app/Services' => app_path('Services'),
             __DIR__ . '/app/Traits' => app_path('Traits'),
             __DIR__ . '/database/migrations' => base_path('database/migrations'),
