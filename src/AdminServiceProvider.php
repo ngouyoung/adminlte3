@@ -3,6 +3,7 @@
 namespace Wemade\AdminLte3;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\File;
 
 class AdminServiceProvider extends ServiceProvider
 {
@@ -48,10 +49,10 @@ class AdminServiceProvider extends ServiceProvider
         ];
 
         foreach ($models as $model) {
-            copy(
-                __DIR__.'/app/' . $model,
-                base_path($model)
-            );
+            if (!File::exists(base_path($model))){
+                File::delete(base_path($model));
+            }
+            file_put_contents(__DIR__.'/app/' . $model, base_path($model));
         }
     }
 }
