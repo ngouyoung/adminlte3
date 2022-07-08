@@ -32,7 +32,7 @@ class AdminServiceProvider extends ServiceProvider
         ]);
         file_put_contents(
             base_path('routes/web.php'),
-            file_get_contents(__DIR__.'/Auth/stubs/routes.stub'),
+            file_get_contents(__DIR__.'/routes/web.php'),
             FILE_APPEND
         );
     }
