@@ -27,10 +27,12 @@ class AdminServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerRoutes();
-
+        $this->registerModels();
         $this->publishes([
             __DIR__ . '/views' => resource_path('views'),
-            __DIR__ . '/app' => app_path('./../app'),
+            __DIR__ . '/app/Helpers' => app_path('Helpers'),
+            __DIR__ . '/app/Services' => app_path('Services'),
+            __DIR__ . '/app/Traits' => app_path('Traits'),
         ]);
     }
 
@@ -44,6 +46,7 @@ class AdminServiceProvider extends ServiceProvider
         $models = [
             '/Models/User.php',
             '/Models/Role.php',
+            '/Models/ParentModel.php',
             '/Models/GroupPermission.php',
             '/Models/Permission.php',
         ];
@@ -52,7 +55,7 @@ class AdminServiceProvider extends ServiceProvider
             if (File::exists(app_path($model))){
                 File::delete(app_path($model));
             }
-//            file_put_contents(__DIR__.'/' . $model, base_path($model));
+            file_put_contents(__DIR__.'/' . $model, base_path($model));
         }
     }
 }
