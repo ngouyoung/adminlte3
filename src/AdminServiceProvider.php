@@ -30,11 +30,6 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__.'/views' => resource_path('views'),
             __DIR__.'/app' => app_path('./../app'),
         ]);
-        file_put_contents(
-            base_path('routes/web.php'),
-            file_get_contents(__DIR__.'/routes/web.php'),
-            FILE_APPEND
-        );
     }
 
     public function registerRoutes() {
