@@ -55,21 +55,21 @@ class AdminServiceProvider extends ServiceProvider
         ];
 
         foreach ($models as $model) {
-            if (File::exists(app_path($model))){
+            if (File::exists(app_path($model))) {
                 File::delete(app_path($model));
             }
-            copy(__DIR__.'/app/' . $model, app_path($model));
+            copy(__DIR__ . '/app/' . $model, app_path($model));
         }
     }
 
     public function registerDatabase()
     {
 
-        $seeder = 'database/seeders/DatabaseSeeder.php';
+        $seeder = 'seeders/DatabaseSeeder.php';
 
-        if (File::exists(base_path($seeder))){
+        if (File::exists(base_path($seeder))) {
             File::delete(base_path($seeder));
         }
-        copy(__DIR__.'/app/' . $seeder, base_path($seeder));
+        copy(__DIR__ . '/database/' . $seeder, base_path('database/' . $seeder));
     }
 }
